@@ -99,7 +99,7 @@ By default it’s the `root` user that owns the Unix socket, and other users can
 3\. Verify that you can run `docker` commands without `sudo`.
 
     docker run hello-world
-Docker will automatically start when installed on Debian and Ubuntu, so we're done with post-install setup
+Docker will automatically start during system boot when installed on Debian and Ubuntu, so we're done with post-install setup.
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 [^2]: https://docs.docker.com/engine/install/linux-postinstall/
