@@ -21,7 +21,7 @@ Hardware used:
     - click done
 6. Software Updater pop-up will appear(you might need to give it a sec). Click install now
 7. After it finishes installing all the updates, it will ask for a restart. Press "restart now"
-8. Run ```sudo apt update``` in the terminal, and then when it finishes finding all updates, run ```sudo apt upgrade``` and accept
+8. Run ```sudo apt update && sudo apt upgrade``` in the terminal and accept
 9. Restart OS (not really necessary but makes my goofy Windows-user self feel better)
 
 <details><summary>Some things I do personally in settings to make the experience better:</summary>
