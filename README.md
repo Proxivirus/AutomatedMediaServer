@@ -67,7 +67,7 @@ It's going to be installed through the repository as I personally find that to b
 
     sudo apt-get update
     
-<details><summary>Receiving a GPG error when running apt-get update?</summary>
+<details><summary>Click this if you get a GPG error</summary>
 <p>
 Your default umask may be incorrectly configured, preventing detection of the repository public key file. Try granting read permission for the Docker public key file before updating the package index:
 
@@ -77,5 +77,10 @@ Your default umask may be incorrectly configured, preventing detection of the re
 </p>
 </details>
 
+2\. Install Docker Engine, containerd, and Docker Compose.
+
+To install the latest version, run:
+    
+    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
