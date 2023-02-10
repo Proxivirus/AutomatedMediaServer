@@ -19,8 +19,8 @@ Hardware used:
     - I send system info, but it's not necessary
     - location services off
     - click done
-6. Software Updater pop-up will appear(you might need to give it a sec). Click install now
-7. After it finishes installing all the updates, it will ask for a restart. Press "restart now"
+6. Software Updater pop-up will appear(you might need to give it a sec). Click **Install Now**
+7. After it finishes installing all the updates, the Software Updater icon on the left will get rid of the progress bar. Click the icon and press **Restart Now**
 8. Run ```sudo apt update && sudo apt upgrade``` in the terminal and accept
 9. Restart OS (not really necessary but makes my goofy Windows-user self feel better)
 
