@@ -36,7 +36,7 @@ Hardware used:
 </p>
 </details>
 
-## Install Docker
+## Setup Docker
 It's going to be installed through the repository as I personally find that to be the simplest way. These instructions are copied straight from the official Docker Documentation[^1].
 
 ### Set up the repository
@@ -86,5 +86,20 @@ To install the latest version, run:
 **3\. Verify that the Docker Engine installation is successful by running the `hello-world` image:**
 
     sudo docker run hello-world
+This command downloads a test image and runs it in a container. When the container runs, it prints a confirmation message and exits.
+
+### Manage Docker as a non-root user
+By default it’s the `root` user that owns the Unix socket, and other users can only access it using `sudo`. The Docker daemon always runs as the `root` user. The next few steps will add the current running user to the `docker` group that was automatically created during the Docker Install steps above. These steps are also copied straight from the official Docker Documentation[^2]
+
+1\. Add your user to the docker group.
+
+    sudo usermod -aG docker $USER
+2\. Log out and log back in so that your group membership is re-evaluated.
+
+3\. Verify that you can run `docker` commands without `sudo`.
+
+    docker run hello-world
+Docker will automatically start when installed on Debian and Ubuntu, so we're done with post-install setup
 
 [^1]: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+[^2]: https://docs.docker.com/engine/install/linux-postinstall/
