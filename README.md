@@ -67,7 +67,7 @@ It's going to be installed through the repository as I personally find that to b
 
     sudo apt-get update
     
-<details><summary>_Click this if you get a GPG error_</summary>
+_<details><summary>Click this if you get a GPG error</summary>_
 <p>
 Your default umask may be incorrectly configured, preventing detection of the repository public key file. Try granting read permission for the Docker public key file before updating the package index:
 
