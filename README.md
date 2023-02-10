@@ -61,4 +61,10 @@ It's going to be installed through the repository as I personally find that to b
       "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
       $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
+### Install Docker Engine
+
+1\. Update the `apt` package index:
+
+    sudo apt-get update
+
 [^1]: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
