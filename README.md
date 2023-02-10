@@ -91,12 +91,31 @@ This command downloads a test image and runs it in a container. When the contain
 ### Manage Docker as a non-root user
 By default it’s the `root` user that owns the Unix socket, and other users can only access it using `sudo`. The Docker daemon always runs as the `root` user. The next few steps will add the current running user to the `docker` group that was automatically created during the Docker Install steps above. These steps are also copied straight from the official Docker Documentation[^2]
 
-1\. Add your user to the docker group.
+1\. Fix permissions since we ran the `hello-world` test to make sure our installation worked.
+
+    sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+    sudo chmod g+rwx "$HOME/.docker" -R
+
+_<details><summary>Explanation of why we had to do that</summary>_
+<p>
+
+We initially ran a Docker CLI command, the `hello-world` test, using `sudo` before adding ourselves to the `docker` group, causing the following error:
+
+>WARNING: Error loading config file: /home/user/.docker/config.json -<br>stat /home/user/.docker/config.json: permission denied
+
+This error indicates that the permission settings for the `~/.docker/` directory are incorrect, due to having used the `sudo` command earlier.
+
+Running the permission fix command above solves that problem
+    
+</p>
+</details>
+
+2\. Add your user to the docker group.
 
     sudo usermod -aG docker $USER
-2\. Log out and log back in so that your group membership is re-evaluated.
+3\. Log out and log back in so that your group membership is re-evaluated.
 
-3\. Verify that you can run `docker` commands without `sudo`.
+4\. Verify that you can run `docker` commands without `sudo`.
 
     docker run hello-world
 Docker will automatically start during system boot when installed on Debian and Ubuntu, so we're done with post-install setup.
