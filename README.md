@@ -12,7 +12,7 @@ Hardware used:
 1. Go to [the official Ubuntu website](https://ubuntu.com/download/desktop) and grab the latest ISO for 22.04.1 LTS 
 2. Go the [the official Balena Etcher website](https://www.balena.io/etcher#download-etcher) and download the proper version for your OS
 3. Plug in the USB and flash the ISO onto it
-4. Plug in the USB to the media server machine and install Ubuntu (minimal installation, download updates + 3rd party drivers)
+4. Plug in the USB to the media server machine and install Ubuntu (minimal installation, download updates, + install 3rd-party software)
 5. Load into the OS and navigate through the setup pop-up
     - don't connect any online accounts
     - don't setup Livepatch
