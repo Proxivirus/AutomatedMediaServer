@@ -100,7 +100,7 @@ By default it’s the `root` user that owns the Unix socket, and other users can
 _<details><summary>Explanation of why we had to do that</summary>_
 <p>
 
-We initially ran a Docker CLI command (the `hello-world` test) using `sudo` before adding ourselves to the `docker` group, which would cause the following error:
+We initially ran a Docker CLI command (the `hello-world` test) using `sudo` before adding ourselves to the `docker` group, which could cause the following error:
 
 >WARNING: Error loading config file: /home/user/.docker/config.json -<br>stat /home/user/.docker/config.json: permission denied
 
