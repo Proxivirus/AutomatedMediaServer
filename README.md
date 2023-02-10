@@ -92,7 +92,7 @@ This command downloads a test image and runs it in a container. When the contain
 ### Manage Docker as a non-root user
 By default it’s the `root` user that owns the Unix socket, and other users can only access it using `sudo`. The Docker daemon always runs as the `root` user. The next few steps will add the current running user to the `docker` group that was automatically created during the Docker Install steps above. These steps are also copied straight from the official Docker Documentation[^2]
 
-**1\. Fix permissions. **
+**1\. Fix permissions.**
 
     sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
     sudo chmod g+rwx "$HOME/.docker" -R
