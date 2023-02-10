@@ -83,4 +83,8 @@ To install the latest version, run:
     
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
+**3\. Verify that the Docker Engine installation is successful by running the `hello-world` image:**
+
+    sudo docker run hello-world
+
 [^1]: https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
