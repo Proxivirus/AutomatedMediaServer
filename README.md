@@ -33,6 +33,7 @@ Hardware used:
 - Go in Displays, Night Light at the top, Turn Night Light on, swap to Manual Schedule, and change the times to the same number to make it always enabled 
 - Go into Date & Time and change Time Format to AM/PM 
 - Go into About and make sure all my hardware shows up
+- Unpin unnecessary applications from the sidebar, and pin Terminal and System Monitor
 </p>
 </details>
 
@@ -91,7 +92,7 @@ This command downloads a test image and runs it in a container. When the contain
 ### Manage Docker as a non-root user
 By default it’s the `root` user that owns the Unix socket, and other users can only access it using `sudo`. The Docker daemon always runs as the `root` user. The next few steps will add the current running user to the `docker` group that was automatically created during the Docker Install steps above. These steps are also copied straight from the official Docker Documentation[^2]
 
-1\. Fix permissions since we ran the `hello-world` test to make sure our installation worked.
+1\. Fix permissions. 
 
     sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
     sudo chmod g+rwx "$HOME/.docker" -R
@@ -99,13 +100,13 @@ By default it’s the `root` user that owns the Unix socket, and other users can
 _<details><summary>Explanation of why we had to do that</summary>_
 <p>
 
-We initially ran a Docker CLI command, the `hello-world` test, using `sudo` before adding ourselves to the `docker` group, causing the following error:
+We initially ran a Docker CLI command (the `hello-world` test) using `sudo` before adding ourselves to the `docker` group, which would cause the following error:
 
 >WARNING: Error loading config file: /home/user/.docker/config.json -<br>stat /home/user/.docker/config.json: permission denied
 
 This error indicates that the permission settings for the `~/.docker/` directory are incorrect, due to having used the `sudo` command earlier.
 
-Running the permission fix command above solves that problem
+Running the permission fix command above allows us to do the following steps without having issues.
     
 </p>
 </details>
