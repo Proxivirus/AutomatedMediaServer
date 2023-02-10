@@ -41,7 +41,7 @@ It's going to be installed through the repository as I personally find that to b
 
 ### Set up the repository
 
-1\. Update the `apt` package index and install packages to allow `apt` to use a repository over HTTPS:
+**1\. Update the `apt` package index and install packages to allow `apt` to use a repository over HTTPS:**
 
     sudo apt-get update
     sudo apt-get install \
@@ -50,12 +50,12 @@ It's going to be installed through the repository as I personally find that to b
         gnupg \
         lsb-release
 
-2\. Add Docker’s official GPG key:
+**2\. Add Docker’s official GPG key:**
 
     sudo mkdir -m 0755 -p /etc/apt/keyrings
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-3\. Use the following command to set up the repository:
+**3\. Use the following command to set up the repository:**
 
     echo \
       "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -63,11 +63,11 @@ It's going to be installed through the repository as I personally find that to b
 
 ### Install Docker Engine
 
-1\. Update the `apt` package index:
+**1\. Update the `apt` package index:**
 
     sudo apt-get update
     
-<details><summary>Click this if you get a GPG error</summary>
+<details><summary>_Click this if you get a GPG error_</summary>
 <p>
 Your default umask may be incorrectly configured, preventing detection of the repository public key file. Try granting read permission for the Docker public key file before updating the package index:
 
@@ -77,7 +77,7 @@ Your default umask may be incorrectly configured, preventing detection of the re
 </p>
 </details>
 
-2\. Install Docker Engine, containerd, and Docker Compose.
+**2\. Install Docker Engine, containerd, and Docker Compose.**
 
 To install the latest version, run:
     
