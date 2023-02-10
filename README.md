@@ -12,9 +12,15 @@ Hardware used:
 2. Go the [the official Balena Etcher website](https://www.balena.io/etcher#download-etcher) and download the proper version for your OS
 3. Plug in the USB and flash the ISO onto it
 4. Plug in the USB to the media server machine and install Ubuntu (minimal installation, download updates + 3rd party drivers)
-5. Load into the OS and let the pop-up appear, install all updates
-6. It'll need to restart afterwards so make sure to do that
-7. Run ```sudo apt update``` in the terminal, and then when it finishes finding all updates, run ```sudo apt upgrade``` and accept
-8. Restart OS (not really necessary but makes my goofy Windows-user self feel better)
+5. Load into the OS and navigate through the setup pop-up
+    - don't connect any online accounts
+    - don't setup Livepatch
+    - I send system info, but it's not necessary
+    - location services off
+    - click done
+6. Software Updater pop-up will appear. Click install now
+7. After it finishes installing all the updates, it will ask for a restart. Do that 
+8. Run ```sudo apt update``` in the terminal, and then when it finishes finding all updates, run ```sudo apt upgrade``` and accept
+9. Restart OS (not really necessary but makes my goofy Windows-user self feel better)
 
 ## Install Docker
