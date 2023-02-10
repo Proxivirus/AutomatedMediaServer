@@ -24,13 +24,16 @@ Hardware used:
 8. Run ```sudo apt update``` in the terminal, and then when it finishes finding all updates, run ```sudo apt upgrade``` and accept
 9. Restart OS (not really necessary but makes my goofy Windows-user self feel better)
 
-<sub>Some things I do personally in settings to make the experience better:
-1. Go in Appearance and switch it to dark</sub>
-2. Go in Background and change it to something darker
-3. Go in Power and change Screen Blank to 15 minutes or never
-4. Go in Displays, Night Light at the top, Turn Night Light on, swap to Manual Schedule, and change the times to the same number to make it always enabled
-5. Go into Date & Time and change Time Format to AM/PM
-6. Go into About and make sure all my hardware shows up
-
+<details><summary>Some things I do personally in settings to make the experience better:</summary>
+<p>
+    
+- Go in Appearance and switch it to dark
+- Go in Background and change it to something darker 
+- Go in Power and change Screen Blank to 15 minutes or never 
+- Go in Displays, Night Light at the top, Turn Night Light on, swap to Manual Schedule, and change the times to the same number to make it always enabled 
+- Go into Date & Time and change Time Format to AM/PM 
+- Go into About and make sure all my hardware shows up
+</p>
+</details>
 
 ## Install Docker
