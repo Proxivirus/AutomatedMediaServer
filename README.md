@@ -126,3 +126,6 @@ Docker will automatically start during system boot when installed on Debian and 
 
 ## Setup Portainer
 This'll be used to easily manage Docker containers
+
+
+# Writing this guide slowly over time. Plz be patient
